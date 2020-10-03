@@ -199,6 +199,7 @@ export class MediaAutoTrack {
 			parseFloat(eventData.properties.duration);
 		eventData.properties.eventValue = Number(percentage.toFixed(4));
 		delete eventData.properties.domElementId;
+		delete eventData.properties.timestamp;
 		this._provider.putToBuffer(newParams);
 	}
 
