@@ -23,6 +23,7 @@ enum MEDIA_TYPE {
 	'AUDIO' = 'AUDIO',
 }
 enum EVENT_TYPE {
+	'WATCH' = 'watch',
 	'PLAY' = 'Play',
 	'ENDED' = 'Ended',
 	'PAUSE' = 'Pause',
@@ -144,6 +145,7 @@ export class MediaAutoTrack {
 			HTML5_MEDIA_EVENT.PLAY,
 			() => {
 				that.eventActionMapping[EVENT_TYPE.PLAY](MEDIA_TYPE.VIDEO);
+				that.eventActionMapping[EVENT_TYPE.WATCH](MEDIA_TYPE.VIDEO);
 			},
 			false
 		);
